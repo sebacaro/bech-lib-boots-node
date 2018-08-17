@@ -1,0 +1,11 @@
+.table-bech {
+    &__activo {
+      background-color: $bech_color;
+      color: #ffffff;
+    }
+
+    &__success {
+      background-color: $green_color;
+      color: #ffffff;
+    }
+  }

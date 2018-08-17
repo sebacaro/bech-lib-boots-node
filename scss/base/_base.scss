@@ -1,0 +1,54 @@
+
+body {
+  margin: 0;
+  font-size: 1rem;
+  color: $font_color;
+  font-family: #{$font-family};
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+
+p {
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0.67em 0;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+// MARGINS
+$margin5: 5px;
+$margin10: 10px;
+$margin15: 15px;
+$margin20: 20px;
+
+// PADDINGS
+$padding5: 5px;
+$padding10: 10px;
+$padding15: 15px;
+$padding20: 20px;
+
+// SHADOWS
+$shadow-btn: 0 2px 4px rgba(0, 0, 0, .12);
+$small-shadow: 0px 3px 6px $font_color2;
+$big-shadow: 0px 5px 12px $font_color2;
+
+// BORDER-RADIUS
+$radius5: 5px;
+$radius40:40px;

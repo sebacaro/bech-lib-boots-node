@@ -1,0 +1,81 @@
+// EXTENDS
+%btn {
+	border-radius: $radius40;
+    box-shadow: $shadow-btn;
+    background-position: center;
+    transition: background 0.8s;
+    text-align: center;
+    width:90%;
+    margin: 8px 5%; 
+    height: 44px;
+    line-height:25px;
+    font-size: 16px;
+    font-weight: 600;
+    &.small {width:48%; margin: 8px 1%; height:34px; line-height: 15px; font-weight: 600; font-size: 13px; float:left;}
+    &.center {margin: 8px auto; float: none;}
+}
+
+// BTN
+.button-bech--primary {
+    @extend %btn;
+    background: $bech_color;
+    border: 2px solid $bech_color;
+    color: #FFFFFF;
+    &:hover {background: $bech_color radial-gradient(circle, transparent 1%, $bech_color 1%) center/15000%; border: 2px solid $bech_color; text-decoration: none; color: #ffffff;}
+    &:active {background-color: $bech_color2 !important; background-size: 100%; transition: background 0s;}
+}
+.button-bech--secondary {
+    @extend %btn;
+    background: none;
+    border: 2px solid $bech_color;
+    color: $bech_color;
+    &:hover {background: #FFFFFF radial-gradient(circle, transparent 1%, #FFFFFF 1%) center/15000%; border: 2px solid $bech_color; text-decoration: none; color: $bech_color;}
+    &:active {background-color: $bech_color2; background-size: 100%; transition: background 0s;}    
+}
+.button-bech--accent {
+    @extend %btn;
+    background: $accent_color;
+    border: 2px solid $accent_color;
+    color: #FFFFFF;
+    &:hover {background: $accent_color radial-gradient(circle, transparent 1%, $accent_color 1%) center/15000%; border: 2px solid $accent_color; text-decoration: none; color: #ffffff;}
+    &:active {background-color: $accent_color2; background-size: 100%; transition: background 0s;}
+}
+.button-bech--accent2 {
+    @extend %btn;
+    background: none;
+    border: 2px solid $accent_color;
+    color: $accent_color;
+    &:hover {background: #FFFFFF radial-gradient(circle, transparent 1%, #FFFFFF 1%) center/15000%; border: 2px solid $accent_color; text-decoration: none; color: $accent_color;}
+    &:active {background-color: $accent_color2; background-size: 100%; transition: background 0s;}    
+}
+.button-bech--disable {
+    @extend %btn;
+    box-shadow:none;
+    background: $disable;
+    border: 2px solid $disable;
+    color: $text-disable;
+    &:hover {background: $disable; text-decoration: none; color: $text-disable}
+}
+.button-bech--disable2 {
+    @extend %btn;
+    box-shadow:none;
+    background: none;
+    border: 2px solid $disable;
+    color: $disable;
+    &:hover {background: #FFFFFF radial-gradient(circle, transparent 1%, #FFFFFF 1%) center/15000%; border: 2px solid $disable; text-decoration: none; color: $disable;}; 
+}
+
+.button-bech-text {
+    font-weight: 700;
+    font-size: 16px;
+    color: #3E50B4;
+
+    &--modal {
+        font-weight: 700;
+        font-size: 16px;
+        color: #3E50B4;
+        display: block;
+        margin: 0 auto;
+        padding-top: 20px;
+    }
+}

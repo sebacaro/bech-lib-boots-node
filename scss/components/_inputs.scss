@@ -1,0 +1,147 @@
+// INPUTS
+select ~ :after {
+    display: none;
+  }
+  
+  .input-bech-label {
+    &.bech-select {
+      position: relative;
+  
+      &.disabled {
+        pointer-events: none;
+  
+        select {
+          color: $font_color2;
+          font-weight: 400;
+          background: #f7f7f7;;
+        }
+  
+        &:after {
+          opacity: 0.6;
+        }
+      }
+  
+      select {
+        appearance: none;
+        padding-right: 32px;
+      }
+  
+      &:after {
+        font-family: 'BECH';
+        content: "\e966";
+        color: $bech_color;
+        float:right;
+        font-size:32px;
+        font-weight:800;
+        width: 24px;
+        height: 24px;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 22px;
+        margin-right: 8px;
+        pointer-events: none;
+      }
+    }
+  }
+  
+  .input-bech-label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    position: relative;
+  
+    label {
+      font-size: 14px;
+      line-height: 16px;
+      margin-bottom: 8px;
+      font-weight: 700;
+      color: $font_color;
+      transition: 0.25s ease-in-out;
+    }
+  
+    &:focus-within label {
+      color: $bech_color;
+    }
+  
+    &.input-prefix {
+      .prefix {
+        position: absolute;
+        top: 32px;
+        left: 16px;
+        font-weight: 700;
+      }
+  
+      input {
+        padding-left: 62px;
+      }
+    }
+  
+    input, select,textarea {
+      border-radius: 4px;
+      background-color: #ffffff;
+      border: solid 1px $border_color;
+      padding: 9px 16px;
+      line-height: 20px;
+      font-size: 1.000em;
+      font-weight: 700;
+      transition: 0.25s ease-in-out;
+      color: $font_color;
+      -webkit-appearance: none;
+  
+      &::placeholder {
+        color: $font_color2;
+        font-weight: 400;
+      }
+  
+      &:active {
+        border: solid 1px $bech_color;
+        color: $font_color;
+      }
+  
+      &:focus {
+        outline: 0;
+        border: solid 1px $bech_color;
+        color: $font_color;
+      }
+  
+      &:focus + label {
+        color: #cc0000 !important;
+      }
+  
+      &:disabled {
+        //color: $font_color_light;
+        font-weight: 400;
+  
+        &:after {
+          display: none;
+        }
+      }
+    }
+  
+    .info-text {
+      font-size: 12px;
+      line-height: 16px;
+      margin-top: 4px;
+      color: $font_color2;
+      font-weight: 600;
+  
+      &:empty {
+        margin: 0;
+      }
+  
+      &--error {
+        color: $red-color;
+      }
+    }
+  }
+  
+  input.ng-invalid.ng-dirty.ng-invalid.ng-touched {
+    border: solid 1px $red_color;
+  }
+  
+  input:-webkit-autofill,
+  textarea:-webkit-autofill,
+  select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+  }

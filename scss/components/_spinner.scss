@@ -1,0 +1,34 @@
+// LOADING
+  .spinner-bech,.spinner:after{
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+ }
+.spinner-bech {
+    background-color: transparent;
+    border-top: 5px solid rgba( $bech_color, 1.0 );
+    border-right: 5px solid rgba( $bech_color, 1.0 );
+    border-bottom: 5px solid rgba( $bech_color, 1.0 );
+    border-left: 5px solid rgba( $bech_color, .0 );
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: .8s;
+    animation-name: spinner-loading;
+    margin: 0 auto;
+    text-align: center;
+ }
+@keyframes spinner-loading{
+  0% {
+      transform: rotate(0deg)
+  } to {
+      transform: rotate(1turn)
+  }
+}
+.texto-bajada-spinner {
+  text-align: center;
+  color: $font_color;
+  margin: 15px 0;
+  font-weight: 100;
+  font-size:14px;
+}

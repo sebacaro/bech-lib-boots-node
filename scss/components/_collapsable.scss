@@ -1,0 +1,38 @@
+.collapsible-bech {
+    height: 48px;
+    background-color:#ffffff;
+    border-bottom: none;
+    background-color: transparent;
+
+    &__title {
+        color: $font_color;
+        font-weight: 700;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.collapsible-bech-card {
+    border: none;
+    margin-bottom: 20px;
+    box-shadow: inset 0 -1px 0 0 #E1E4E7;
+}
+
+.collapsible-bech__icon-title a:after {
+    font-family: 'BECH';
+    content: "\e969";
+    float:right;
+    font-size:32px;
+    font-weight:800;
+    color: $bech_color;
+    margin-top: -28px;
+}
+
+.collapsible-bech__icon-title a.collapsed:after {
+    font-family: 'BECH';
+    content: "\e966";
+    color: $bech_color;
+    box-shadow: none;
+}

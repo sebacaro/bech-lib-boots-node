@@ -1,0 +1,90 @@
+//extend
+%puntos {
+    width: 15px;
+    height:15px;
+    border: 1px solid $border_color;
+    border-radius:50%;
+    background-color:$border_color;
+    font-size: 10px;
+    font-weight: 100;
+    text-align: center;
+    margin: 0 auto;
+    color: $font_color2;
+    &.active {
+        background-color: $bech_color;
+        border: 1px solid $bech_color;
+        animation-duration: .4s;
+        animation-name: destacado;
+        color: #ffffff;
+    }
+
+    &.past {
+        background-color: $green_color;
+        border: 1px solid $green_color;
+        line-height: 0px;
+        font-size: 13px;
+        color:#ffffff;
+    }
+
+    &.left {
+        float: left;
+    }
+
+    &.right {
+        float: right;
+    }            
+}
+//steps
+.steps-bech {
+    border-bottom: 1px solid $border_color;
+    height:8px;
+    width: 100%;
+    margin: 10px 10% 20px;
+    .stp3 {
+        width:33.3%;
+        height: 10px;
+        float:left;       
+        .point {
+            @extend %puntos;        
+        }
+    }
+    
+    .stp4 {
+        width:33%;
+        &:nth-child(2), &:nth-child(3) {
+            width:17%;
+        } 
+        height: 10px;
+        float:left;
+        .point {
+            @extend %puntos; 
+        }
+
+    }
+    .stp5 {
+        width:23%;
+        &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+            width:18%;
+        }
+        height: 10px;
+        float:left;
+        .point {
+            @extend %puntos; 
+        }
+    }   
+}
+@keyframes destacado {
+    from {
+      background-color: rgba( $bech_color, .0);
+      width: 40px;
+      height: 40px;
+      margin-top: -18px;
+      border: none;
+    }
+  
+    to {
+      background-color: $bech_color;
+      width: 10px;
+      height: 10px;
+    }
+  }

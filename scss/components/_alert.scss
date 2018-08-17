@@ -1,0 +1,50 @@
+// CAJAS DE ALERTA
+.alert-bech {
+    background-color: $font_color;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 1rem;
+    border-radius: 0px;
+    border: none; 
+
+    .close {
+        color: #ffffff;
+        opacity: 1;
+        text-shadow: none;
+    }
+    
+}
+
+.alert-bech-ok {
+    background-color: $green_color;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 1rem;
+    border-radius: 0px;
+    border: none; 
+
+    .close {
+        color: #ffffff;
+        opacity: 1;
+        text-shadow: none;
+    }
+}
+
+
+
+// CARD PERSONALIZADA HOME
+.card {
+    .full {
+        font-size: 3.5em;
+        color: #dddddd;
+        text-align: center;
+    }
+    &.quitar-borde {
+        border: none; 
+    }
+    .card-body {
+        &.sin-padding {
+            padding: 1.25rem 0px;
+        }
+    }   
+}

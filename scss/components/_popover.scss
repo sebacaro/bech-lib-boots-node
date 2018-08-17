@@ -1,0 +1,23 @@
+.popover {
+    border-color: $bech_color2;
+}
+
+.popover-header {
+    text-align: center;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    background-color: #ffffff;
+    border-bottom: none;
+    margin-bottom: 0;
+}
+  
+.popover-body {
+    line-height: 20px;
+    font-size: 14px;
+    color: $font_color2;
+    margin-bottom: 5px;
+    border-color: $bech_color2;
+}
+

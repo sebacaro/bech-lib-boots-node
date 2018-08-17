@@ -1,0 +1,173 @@
+//CHECKBOX
+
+.checkbox-bech {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 34px;
+  line-height: 18px;
+}
+
+.checkbox-bech > input {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  position: absolute;
+  z-index: -1;
+  left: -20px;
+  top: -12px;
+  display: block;
+  margin: 0;
+  border-radius: 50%;
+  width: 58px;
+  height: 58px;
+  background-color: rgba(0, 0, 0, 0.42);
+  outline: none;
+  opacity: 0;
+  transform: scale(1);
+  -ms-transform: scale(0); /* Graceful degradation for IE */
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.checkbox-bech > input:checked {
+  background-color: $bech_color;
+}
+
+.checkbox-bech:active > input {
+  opacity: 1;
+  transform: scale(0);
+  transition: opacity 0s, transform 0s;
+}
+
+.checkbox-bech > input:disabled {
+  opacity: 0;
+}
+
+.checkbox-bech > input:disabled + span {
+  cursor: initial;
+}
+
+.checkbox-bech > span::before {
+  content: "";
+  display: inline-block;
+  margin-right: 15px;
+  border: solid 2px rgba(0, 0, 0, 0.42);
+  border-radius: 2px;
+  width: 20px;
+  height: 20px;
+  vertical-align: -4px;
+  transition: border-color 0.5s, background-color 0.5s;
+}
+
+.checkbox-bech > input:checked + span::before {
+  border-color: $bech_color;
+  background-color: $bech_color;
+}
+
+.checkbox-bech > input:active + span::before {
+  border-color: $bech_color;
+}
+
+.checkbox-bech > input:checked:active + span::before {
+  border-color: transparent;
+  background-color: rgba(0, 0, 0, 0.42);
+}
+
+.checkbox-bech > input:disabled + span::before {
+  border-color: rgba(0, 0, 0, 0.26);
+}
+
+.checkbox-bech > input:checked:disabled + span::before {
+  border-color: transparent;
+  background-color: rgba(0, 0, 0, 0.26);
+}
+
+.checkbox-bech > span::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 14px;
+  border: solid 2px transparent;
+  border-left: none;
+  border-top: none;
+  transform: translate(6.6px, 6px) rotate(45deg);
+  -ms-transform: translate(5.5px, 2px) rotate(45deg);
+}
+
+.checkbox-bech > input:checked + span::after {
+  border-color: #fff;
+}
+
+//RADIO
+
+$radio-checked-color: $bech_color;
+$radio-border-color: $bech_color;
+$radio-size: 20px;
+$radio-checked-size: 10px; 
+$radio-ripple-size: 15px;
+
+@keyframes ripple {
+  0% {
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.0);
+  }
+  50% { 
+    box-shadow: 0px 0px 0px $radio-ripple-size rgba(0, 0, 0, 0.1);
+  }
+  100% {
+    box-shadow: 0px 0px 0px $radio-ripple-size rgba(0, 0, 0, 0);
+  }
+}
+
+.radio-bech {
+    margin: 16px 0;
+    
+    &.radio-inline {
+        display: inline-block;
+    }
+
+    input[type="radio"] {
+        display: none;
+        &:checked + label:before {
+            border-color: $radio-checked-color;
+            animation: ripple 0.2s linear forwards;   
+        }
+        &:checked + label:after {
+            transform: scale(1);
+        }
+    }
+    
+    label {
+        display: inline-block;
+        height:$radio-size;
+        position: relative;
+        padding: 0 ($radio-size + 10px);
+        margin-bottom: 0;
+        cursor: pointer;
+        vertical-align: bottom;
+        &:before, &:after {
+            position: absolute;            
+            content: '';  
+            border-radius: 50%;
+            transition: all .3s ease;
+            transition-property: transform, border-color;
+        }
+        &:before {
+            left: 0;
+            top: 0;
+            width: $radio-size;
+            height: $radio-size;
+            border: 2px solid $radio-border-color;
+        }
+        &:after {
+            top: $radio-size / 2 - $radio-checked-size / 2;
+            left: $radio-size / 2 - $radio-checked-size / 2;
+            width:$radio-checked-size;
+            height:$radio-checked-size;
+            transform: scale(0);
+            background:$radio-checked-color;
+        }
+    }
+}
