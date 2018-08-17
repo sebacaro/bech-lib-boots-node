@@ -3,9 +3,9 @@
     font-family: 'BECH';
     src:  url('iconos/BECH.eot?lxqpa3');
     src:  url('iconos/BECH.eot?lxqpa3#iefix') format('embedded-opentype'),
-      url('iconos/BECH.ttf?lxqpa3') format('truetype'),
-      url('iconos/BECH.woff?lxqpa3') format('woff'),
-      url('iconos/BECH.svg?lxqpa3#BECH') format('svg');
+      url('#{$font-path}/iconos/BECH.ttf?lxqpa3') format('truetype'),
+      url('#{$font-path}/iconos/BECH.woff?lxqpa3') format('woff'),
+      url('#{$font-path}/iconos/BECH.svg?lxqpa3#BECH') format('svg');
     font-weight: normal;
     font-style: normal;
   }
